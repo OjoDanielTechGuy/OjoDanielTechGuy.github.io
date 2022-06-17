@@ -1,61 +1,62 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-main{
+main {
     font-size: 15;
 }
 
-#CAR-INFO{
+#CAR-INFO {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
     width: 60%;
     height: 100vH;
-    margin-bottom: 0;    
+    margin-bottom: 0;
     padding-bottom: 0;
 }
 
-#SEDANS, #SUVS, #LUXURY{
+#SEDANS,
+#SUVS,
+#LUXURY {
     padding: 2em;
     color: white;
 }
 
-#SEDANS{
+#SEDANS {
     background-color: hsl(31, 77%, 52%);
 }
 
-#SUVS{
-   background-color: hsl(184, 100%, 22%);
+#SUVS {
+    background-color: hsl(184, 100%, 22%);
 }
 
-#LUXURY{
+#LUXURY {
     background-color: hsl(179, 100%, 13%);
 }
 
-#SEDANS
-{
+#SEDANS {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
 }
 
-#LUXURY{
+#LUXURY {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 }
 
-img{
+img {
     padding-bottom: 30px;
     width: 50px;
 }
 
 
-h2{
+h2 {
     padding-bottom: 30px;
-    font-family:'Big Shoulders Display';
+    font-family: 'Big Shoulders Display';
 }
 
 p {
@@ -67,53 +68,98 @@ p {
     font-family: 'Lexend Deca';
 }
 
-button{
+button {
     border: 2px solid white;
     padding: 15px 30px;
     border-radius: 30px;
     background-color: white;
     font-family: "Lexend Deca",
-            "Big Shoulders Display";
+        "Big Shoulders Display";
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
     background-color: transparent;
     color: white;
     font-weight: normal;
 }
 
-.sedansBtn{
+.sedansBtn {
     color: hsl(31, 77%, 52%);
 }
 
-.suvsBtn{
+.suvsBtn {
     color: hsl(184, 100%, 22%);
 }
 
-.luxuryBtn{
+.luxuryBtn {
     color: hsl(179, 100%, 13%);
 }
 
-h3{
+h3 {
     text-align: center;
     padding-top: 30px;
     margin: 0;
 }
 
-@media (max-width: 375px){
-    #SEDANS,
-        #SUVS,
-        #LUXURY {
-            width: 100%;
-            margin-top: 300px;
-            padding: 1em;
-            font-size: 12px;
-        }
+@media (max-width: 375px) {
 
-        button{
-            font-size: 10px;
-        }
+    #CAR-INFO {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        margin: 20px auto;
+        padding-left: 40px;
+    }
+
+    button {
+        font-size: 10px;
+    }
+
+    header {
+        font-size: 12px;
+        width: 50%;
+        margin: auto;
+    }
+
+    h3 {
+        font-size: 10px;
+        text-align: center;
+        margin-left: 20px;
+    }
+
+    #SEDANS,
+    #SUVS,
+    #LUXURY {
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    /**This media query puts in it column and makes it more adjustable to difference screen size: At a maximum view of the screen at 800px do the followign underneath:*/
+
+    #CAR-INFO {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        margin: 20px auto;
+    }
+
+    #SEDANS {
+        border-radius: 10px 10px 0 0;
+    }
+
+    #SUVS {
+        border-radius: 0;
+    }
+
+    #LUXURY {
+        border-radius: 0 0 10px 10px;
+    }
 }
